@@ -1,15 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
+import Info from '../Info/Info';
+import Time from '../Time/Time';
 import './Card.css'
 const Card = () => {
 
     const [blogs, setBlog] = useState([])
+
+    const [infos, setInfo] = useState([])
 
     useEffect(()=>{
         fetch('blogdata.json')
         .then(res => res.json())
         .then(data => setBlog(data))
     },[])
+
+    const handleAddToInfo = (blog) =>{
+        //console.log(blog)
+        const newInfo = [...infos, blog]
+        setInfo(newInfo);
+    }
 
     return (
         <div>
@@ -21,11 +31,14 @@ const Card = () => {
                     blogs.map(blog => <Blog
                     key = {blog.id}
                     blog = {blog}
+                    handleAddToInfo = {handleAddToInfo}
                     ></Blog>)
                 }
                 
             </div>
             <div className="cart-container">
+                <Time time = {infos}></Time>
+                {/* <Info infos = {infos}></Info> */}
                 
             </div>
         </div>

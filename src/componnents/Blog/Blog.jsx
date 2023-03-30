@@ -2,8 +2,11 @@ import React from 'react';
 import './Blog.css'
 
 const Blog = (props) => {
-     console.log(props.blog);
+     //console.log(props.blog);
     const {author_name, blog_title, cover_img, hash_tag, pro_images, publish_date, read_time} = props.blog;
+    const handleAddToInfo = props.handleAddToInfo;
+   
+
     return (
         <div>
             <div>
@@ -24,7 +27,7 @@ const Blog = (props) => {
                 </div>
                 <h2>{blog_title}</h2>
                 <p>{hash_tag}</p>
-                <button>Mark as Read</button>
+                <button onClick = {() => handleAddToInfo(props.blog)}>Mark as Read</button>
             </div>
             <hr />
         </div>
