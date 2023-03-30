@@ -9,6 +9,8 @@ const Card = () => {
 
     const [infos, setInfo] = useState([])
 
+    const [infosData, setInfos] = useState([])
+
     useEffect(()=>{
         fetch('blogdata.json')
         .then(res => res.json())
@@ -20,6 +22,17 @@ const Card = () => {
         const newInfo = [...infos, blog]
         setInfo(newInfo);
     }
+    const handleAddToInfo = (blog) =>{
+        //console.log(blog)
+        const newInfos = [...infosData, blog]
+        setInfos(newInfos);
+        
+    }
+    //console.log(infosData);
+
+    let arr = infosData;
+    let uniqueArr = Array.from(new Set(arr));
+    console.log(uniqueArr); // [1, 2, 3, 4, 5]
 
     return (
         <div>
@@ -32,13 +45,25 @@ const Card = () => {
                     key = {blog.id}
                     blog = {blog}
                     handleAddToTime = {handleAddToTime}
+                    handleAddToInfo = {handleAddToInfo}
                     ></Blog>)
                 }
                 
             </div>
             <div className="cart-container">
                 <Time time = {infos}></Time>
+                {/* <Info title = {uniqueArr}></Info> */}
+                {/* <h2>{uniqueArr.length}</h2>
+                <h1>{uniqueArr[0]}</h1>
+                <h1>{uniqueArr[1]}</h1> */}
                 {/* <Info infos = {infos}></Info> */}
+
+                {
+                    uniqueArr.map(getInfo => <Info
+                        key={getInfo}
+                        title = {getInfo}
+                    ></Info>)
+                }
                 
             </div>
         </div>

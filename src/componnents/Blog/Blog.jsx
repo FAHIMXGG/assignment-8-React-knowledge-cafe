@@ -5,6 +5,7 @@ const Blog = (props) => {
      //console.log(props.blog);
     const {author_name, blog_title, cover_img, hash_tag, pro_images, publish_date, read_time} = props.blog;
     const handleAddToTime = props.handleAddToTime;
+    const handleAddToInfo = props.handleAddToInfo;
    
 
     return (
@@ -28,6 +29,7 @@ const Blog = (props) => {
                 <h2>{blog_title}</h2>
                 <p>{hash_tag}</p>
                 <button onClick = {() => handleAddToTime(props.blog)}>Mark as Read</button>
+                <button onClick = {() => handleAddToInfo(blog_title)}>Book</button>
             </div>
             <hr />
         </div>

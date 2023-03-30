@@ -1,0 +1,12 @@
+.time{
+    /* position: sticky;
+    top: 0; */
+
+    background-color: #6047ec50;
+    width: 411px;
+    padding: 1px;
+    text-align: center;
+    border: 1px solid #6047EC;
+    border-radius: 10px;
+    color: #6047EC;
+}

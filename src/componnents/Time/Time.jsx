@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Time.css'
 const Time = ({time}) => {
 
     let total = 0;
@@ -9,8 +9,8 @@ const Time = ({time}) => {
     }
     //console.log(total);
     return (
-        <div>
-            <h1>Spent time on read :{total} min</h1>
+        <div className='time'>
+            <h3>Spent time on read :{total} min</h3>
         </div>
     );
 };
