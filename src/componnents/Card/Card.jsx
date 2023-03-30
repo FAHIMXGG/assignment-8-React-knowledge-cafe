@@ -15,7 +15,7 @@ const Card = () => {
         .then(data => setBlog(data))
     },[])
 
-    const handleAddToInfo = (blog) =>{
+    const handleAddToTime = (blog) =>{
         //console.log(blog)
         const newInfo = [...infos, blog]
         setInfo(newInfo);
@@ -31,7 +31,7 @@ const Card = () => {
                     blogs.map(blog => <Blog
                     key = {blog.id}
                     blog = {blog}
-                    handleAddToInfo = {handleAddToInfo}
+                    handleAddToTime = {handleAddToTime}
                     ></Blog>)
                 }
                 
