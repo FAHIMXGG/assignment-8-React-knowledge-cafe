@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Blog.css'
 
 const Blog = (props) => {
@@ -22,14 +24,17 @@ const Blog = (props) => {
                             <p><small>{publish_date}</small></p>
                         </div>
                     </div>
-                    <div>
-                        <p>{read_time} min read</p>
+                    <div className='bookmark'>
+                        <div><p>{read_time} min read</p></div>
+                        <div>
+                            <button className='b-btn' onClick = {() => handleAddToInfo(blog_title)}><FontAwesomeIcon icon={faBookmark} /></button>
+                        </div>
                     </div>
                 </div>
                 <h2>{blog_title}</h2>
                 <p>{hash_tag}</p>
                 <button onClick = {() => handleAddToTime(props.blog)}>Mark as Read</button>
-                <button onClick = {() => handleAddToInfo(blog_title)}>Book</button>
+                
             </div>
             <hr />
         </div>

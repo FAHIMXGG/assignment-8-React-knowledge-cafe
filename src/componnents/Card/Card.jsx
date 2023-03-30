@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
+import Bookmarked from '../Bookmarked/Bookmarked';
 import Info from '../Info/Info';
 import Time from '../Time/Time';
 import './Card.css'
@@ -52,6 +53,7 @@ const Card = () => {
             </div>
             <div className="cart-container">
                 <Time time = {infos}></Time>
+                <Bookmarked count = {uniqueArr}></Bookmarked>
                 {/* <Info title = {uniqueArr}></Info> */}
                 {/* <h2>{uniqueArr.length}</h2>
                 <h1>{uniqueArr[0]}</h1>
