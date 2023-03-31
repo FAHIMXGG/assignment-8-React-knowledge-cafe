@@ -10,3 +10,13 @@
     border-radius: 10px;
     color: #6047EC;
 }
+
+@media only screen and (max-width:688px) {
+    .time{
+        
+        width: 93vw;
+        padding: 1px;
+        color: #6047EC;
+        margin: auto;
+    }
+  }

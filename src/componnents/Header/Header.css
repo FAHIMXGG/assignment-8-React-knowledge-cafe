@@ -26,3 +26,14 @@
 .menu a:hover{
     color: rgb(255, 217, 0);
 }
+
+@media only screen and (max-width:688px) {
+    .header{
+        padding: 5px;
+        flex-direction: column;
+    }
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
+  }

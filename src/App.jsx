@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <hr />
+      <hr className='hr' />
       <Card></Card>
     </div>
   )

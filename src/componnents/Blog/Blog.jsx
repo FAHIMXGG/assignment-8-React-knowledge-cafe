@@ -12,7 +12,7 @@ const Blog = (props) => {
 
     return (
         <div>
-            <div>
+            <div className='blog'>
                 <img className='cover' src={cover_img} alt="" />
                 <div className='author_container'>
                     <div className='blog_data'>
@@ -31,12 +31,12 @@ const Blog = (props) => {
                         </div>
                     </div>
                 </div>
-                <h2>{blog_title}</h2>
+                <h2 className='blog-t'>{blog_title}</h2>
                 <p>{hash_tag}</p>
-                <button onClick = {() => handleAddToTime(props.blog)}>Mark as Read</button>
+                <button className='mark_btn' onClick = {() => handleAddToTime(props.blog)}>Mark as Read</button>
                 
             </div>
-            <hr />
+            <hr className='blog-hr' />
         </div>
     );
 };

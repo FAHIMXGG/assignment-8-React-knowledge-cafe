@@ -1,3 +1,8 @@
 .book{
     margin-left: 15px;
 }
+@media only screen and (max-width:688px) {
+    .book{
+        margin-left: 10px;
+    }
+  }
