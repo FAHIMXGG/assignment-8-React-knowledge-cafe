@@ -52,3 +52,10 @@
         
     }
   }
+  @media screen and (min-width: 1280px) and (max-width:1366px){
+    .shop-container{
+        
+        margin: 0;
+        padding: 0;
+    }
+  }

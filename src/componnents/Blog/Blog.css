@@ -81,3 +81,27 @@
           
     }
   }
+
+  @media screen and (min-width: 1280px) and (max-width:1366px) {
+    .cover{
+        width: 50vw;
+        padding: 0;
+        margin: 0;
+        margin-right: 0px;
+    }
+    .author_container{
+        flex-direction: column;
+    }
+    .blog-t{
+        font-size: 15px;
+    }
+    .blog{
+        
+    }
+    .blog-hr{
+
+            margin: 0px;
+            margin-top: 12px;
+          
+    }
+  }

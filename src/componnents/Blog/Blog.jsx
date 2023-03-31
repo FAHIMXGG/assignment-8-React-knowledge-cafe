@@ -39,7 +39,7 @@ const Blog = (props) => {
                         <div><p>{read_time} min read</p></div>
                         <div>
                             <button className='b-btn' onClick = {handleClick} ><FontAwesomeIcon icon={faBookmark} /></button>
-                            <button onClick={notify}>ss</button>
+                            
                         </div>
                     </div>
                 </div>
