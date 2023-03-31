@@ -3,12 +3,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
 import './Blog.css'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Blog = (props) => {
      //console.log(props.blog);
     const {author_name, blog_title, cover_img, hash_tag, pro_images, publish_date, read_time} = props.blog;
     const handleAddToTime = props.handleAddToTime;
     const handleAddToInfo = props.handleAddToInfo;
-   
+
+    const notify = () =>{
+        toast("Bookmarked")
+    }
+
+    const handleClick = () => {
+        notify();
+        handleAddToInfo(blog_title);
+      };
 
     return (
         <div>
@@ -27,7 +38,8 @@ const Blog = (props) => {
                     <div className='bookmark'>
                         <div><p>{read_time} min read</p></div>
                         <div>
-                            <button className='b-btn' onClick = {() => handleAddToInfo(blog_title)}><FontAwesomeIcon icon={faBookmark} /></button>
+                            <button className='b-btn' onClick = {handleClick} ><FontAwesomeIcon icon={faBookmark} /></button>
+                            <button onClick={notify}>ss</button>
                         </div>
                     </div>
                 </div>
@@ -37,6 +49,7 @@ const Blog = (props) => {
                 
             </div>
             <hr className='blog-hr' />
+            <ToastContainer />
         </div>
     );
 };

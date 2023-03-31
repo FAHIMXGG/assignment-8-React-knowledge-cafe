@@ -27,7 +27,7 @@ const Card = () => {
         //console.log(blog)
         const newInfos = [...infosData, blog]
         setInfos(newInfos);
-        
+   
     }
     //console.log(infosData);
 
