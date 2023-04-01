@@ -40,7 +40,7 @@ const Card = () => {
         const updatedSet = new Set(mySet);
         //console.log(updatedSet);
         if (updatedSet.size !== gg.length) {
-            console.log("Duplicate element(s) found");
+            //console.log("Duplicate element(s) found");
             notify2();
           }
           else{

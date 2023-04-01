@@ -11,7 +11,7 @@ const Header = () => {
                     <a href="/home">Home</a>
                     <a href="/blog">Blog</a>
                     <a href="/account">Account</a>
-                    <a href="/login">Login</a>
+                    <a href="/logout">LogOut</a>
                 </div>
                 <div>
                     <img src={logo} alt="" />
