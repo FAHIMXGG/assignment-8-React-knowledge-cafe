@@ -35,17 +35,17 @@ const Card = () => {
         setInfos(newInfos);
         //notify();
         // console.log(newInfos)
-        
         const mySet = new Set(newInfos);
-
+        let gg = Array.from(new Set(arr));
         const updatedSet = new Set(mySet);
         //console.log(updatedSet);
-        if (updatedSet.size !== newInfos.length) {
+        if (updatedSet.size !== gg.length) {
             console.log("Duplicate element(s) found");
-            notify();
+            notify2();
           }
           else{
-            notify2()
+            
+            notify();
           }
    
     }
