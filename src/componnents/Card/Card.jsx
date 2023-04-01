@@ -14,7 +14,7 @@ const Card = () => {
     const [infos, setInfo] = useState([])
 
     const [infosData, setInfos] = useState([])
-
+    //data fetch
     useEffect(()=>{
         fetch('blogdata.json')
         .then(res => res.json())
@@ -22,19 +22,20 @@ const Card = () => {
     },[])
 
 
-
+    //time add
     const handleAddToTime = (blog) =>{
         //console.log(blog)
         const newInfo = [...infos, blog]
         setInfo(newInfo);
     }
+    // bookmark
     const handleAddToInfo = (blog) =>{
         //console.log(blog)
         const newInfos = [...infosData, blog]
         setInfos(newInfos);
         //notify();
         // console.log(newInfos)
-
+        
         const mySet = new Set(newInfos);
 
         const updatedSet = new Set(mySet);
@@ -48,7 +49,7 @@ const Card = () => {
           }
    
     }
-    
+    //toast
     const notify = () =>{
         toast("You Have Already Bookmarked This Blog")
     }
@@ -57,6 +58,7 @@ const Card = () => {
     }
     //console.log(infosData);
 
+    //uniqueArr for bookmark info
     let arr = infosData;
     let uniqueArr = Array.from(new Set(arr));
     
