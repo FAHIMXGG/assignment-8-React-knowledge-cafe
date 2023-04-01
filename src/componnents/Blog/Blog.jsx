@@ -12,12 +12,12 @@ const Blog = (props) => {
     const handleAddToTime = props.handleAddToTime;
     const handleAddToInfo = props.handleAddToInfo;
 
-    const notify = () =>{
-        toast("Bookmarked")
-    }
-
+    // const notify = () =>{
+    //     toast("Bookmarked")
+    // }
+    //console.log(props.blog);
     const handleClick = () => {
-        notify();
+        //notify();
         handleAddToInfo(blog_title);
       };
 

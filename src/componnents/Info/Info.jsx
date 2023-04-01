@@ -4,7 +4,7 @@ import './Info.css'
 
 
 const Info = ({title}) => {
-    console.log(title)
+    //console.log(title)
     
 
     return (

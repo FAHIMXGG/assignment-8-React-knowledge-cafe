@@ -4,6 +4,9 @@ import Bookmarked from '../Bookmarked/Bookmarked';
 import Info from '../Info/Info';
 import Time from '../Time/Time';
 import './Card.css'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Card = () => {
 
     const [blogs, setBlog] = useState([])
@@ -18,6 +21,8 @@ const Card = () => {
         .then(data => setBlog(data))
     },[])
 
+
+
     const handleAddToTime = (blog) =>{
         //console.log(blog)
         const newInfo = [...infos, blog]
@@ -27,13 +32,40 @@ const Card = () => {
         //console.log(blog)
         const newInfos = [...infosData, blog]
         setInfos(newInfos);
+        //notify();
+        // console.log(newInfos)
+
+        const mySet = new Set(newInfos);
+
+        const updatedSet = new Set(mySet);
+        //console.log(updatedSet);
+        if (updatedSet.size !== newInfos.length) {
+            console.log("Duplicate element(s) found");
+            notify();
+          }
+          else{
+            notify2()
+          }
    
+    }
+    
+    const notify = () =>{
+        toast("You Have Already Bookmarked This Blog")
+    }
+    const notify2 = () =>{
+        toast("Bookmarked")
     }
     //console.log(infosData);
 
     let arr = infosData;
     let uniqueArr = Array.from(new Set(arr));
-    console.log(uniqueArr); // [1, 2, 3, 4, 5]
+    
+  
+    //console.log(test);
+
+
+
+    //console.log(uniqueArr); // [1, 2, 3, 4, 5]
 
     return (
         <div>
